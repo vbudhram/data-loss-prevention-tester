@@ -1,0 +1,17 @@
+{
+  "name": "data-loss-prevention-tester",
+  "version": "0.0.0",
+  "homepage": "https://github.com/vbudhram/data-loss-prevention-tester",
+  "authors": [
+    "vbudhram <vbudhram@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
