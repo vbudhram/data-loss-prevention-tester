@@ -8,3 +8,7 @@
     color: #0277BD;
     font-weight: 300;
 }
+
+.progress {
+    top: -7px;
+}

@@ -1,0 +1,65 @@
+<div ng-controller="BuildController">
+    <div class="progress" ng-hide="!sending">
+        <div class="indeterminate"></div>
+    </div>
+    <div class="container">
+        <h2 class="header">Build Request</h2>
+
+        <p class="caption">
+            Use this utility to build the request you want to simulate being sent in your network. Select the protocol
+            (HTTP), methods (POST/PUT) and content of the request. You can pre-populate with SSN, Credit Card and HIPA
+            data.
+        </p>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="input-field col s12">
+                <select>
+                    <option value="HTTP">HTTP</option>
+                </select>
+                <label>Protocol Select</label>
+            </div>
+            <div class="input-field col s12">
+                <select>
+                    <option value="HTTP">POST</option>
+                    <option value="HTTP">PUT</option>
+                </select>
+                <label>Method Select</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="contentArea" class="materialize-textarea" ng-model="contentArea"></textarea>
+                <label for="contentArea">Content</label>
+            </div>
+
+            <div class="input-field col s12">
+                <a class="waves-effect waves-light btn green darken-1" ng-click="clearContent()"><i
+                        class="mdi-file-cloud right"></i>Clear</a>
+                <a class="waves-effect waves-light btn amber darken-1" ng-click="addValue(10,'ssn')"><i
+                        class="mdi-file-cloud right"></i>Add SSN</a>
+                <a class="waves-effect waves-light btn amber darken-1" ng-click="addValue(10,'cc')"><i
+                        class="mdi-file-cloud right"></i>Add CC</a>
+            </div>
+
+            <br><br>
+
+            <div class="input-field col s12">
+                <button class="btn-large waves-effect waves-light light-blue darken-3" ng-click="sendRequest()">Submit
+                    <i class="mdi-content-send right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h5 class="header">Response</h5>
+        <p class="caption">Status: {{status}}</p>
+        <p class="caption" ng-repeat="header in headers">{{header.name}} : {{header.value}}</p>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('select').not('.disabled').material_select();
+    });
+</script>

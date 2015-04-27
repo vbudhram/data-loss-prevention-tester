@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html  ng-app="dlp">
 <head>
 	<!--Import materialize.css-->
 	<link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="bower_components/angular/angular-csp.css"/>
 	<link type="text/css" rel="stylesheet" href="css/main.css"/>
 
 	<!--Let browser know website is optimized for mobile-->
@@ -12,54 +13,22 @@
 <body>
 <nav class="light-blue darken-3" role="navigation">
 	<div class="nav-wrapper container">
-        <a id="logo-container" href="index.html" class="brand-logo">DLP Checker</a>
+        <a id="logo-container" ui-sref="home" class="brand-logo">DLP Checker</a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="check.html">Check Network</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a ui-sref="build">Check Network</a></li>
+            <li><a ui-sref="about">About</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
-            <li><a href="check.html">Check Network</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a ui-sref="build">Check Network</a></li>
+            <li><a ui-sref="about">About</a></li>
         </ul>
-		<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+		<a ui-sref="home" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 	</div>
 </nav>
 
-<div class="section no-pad-bot" id="index-banner">
-	<div class="container">
-		<br><br>
-		<h1 class="center orange-text">DLP Checker</h1>
-		<div class="row center">
-			<h5 class="col s12 light">
-                A simple free utility to check your data loss prevention software.
-            </h5>
-		</div>
-		<div class="row center">
-			<a href="check.html" class="btn-large waves-effect waves-light orange">Get Started</a>
-		</div>
-		<br><br>
-	</div>
-</div>
 
-
-<div class="container">
-	<div class="section">
-
-	</div>
-	<br><br>
-
-	<!--<div class="section">-->
-        <!--<div class="row">-->
-            <!--<div class="col s6">-->
-                <!--<img src="http://www.filecluster.com/news/wp-content/uploads/2014/05/Symantec-Logo.png" class="responsive-img"/>-->
-            <!--</div>-->
-            <!--<div class="col s6">-->
-                <!--<img src="http://www.ndm.net/dlp/images/stories/logo/mcafee_logo.png" class="responsive-img"/>-->
-            <!--</div>-->
-        <!--</div>-->
-	<!--</div>-->
-</div>
+<div ui-view></div>
 
 <footer class="page-footer orange">
 	<div class="footer-copyright">
@@ -72,6 +41,17 @@
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
-<script type="text/javascript" src="js/menu.js"></script>
+
+<!--Angular JS-->
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/controllers/ctrl-build.js"></script>
+
+<!--Utils-->
+<script type="text/javascript" src="js/utils/menu.js"></script>
+<script type="text/javascript" src="bower_components/chance/chance.js"></script>
+
 </body>
 </html>
