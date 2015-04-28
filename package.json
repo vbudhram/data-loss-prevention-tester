@@ -1,0 +1,23 @@
+{
+  "name": "data-loss-prevention-tester",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vbudhram/data-loss-prevention-tester.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vbudhram/data-loss-prevention-tester/issues"
+  },
+  "homepage": "https://github.com/vbudhram/data-loss-prevention-tester",
+  "dependencies": {
+    "cors": "^2.6.0",
+    "express": "^4.12.3"
+  }
+}
