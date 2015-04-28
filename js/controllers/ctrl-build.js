@@ -17,7 +17,7 @@ app.controller('BuildController', ['$scope', '$http', function ($scope, $http) {
     $scope.sendRequest = function sendRequest() {
         var req = {
             method: 'POST',
-            url: 'http://requestb.in/1n178fd1',
+            url: 'http://dlpcheck.herokuapp.com',
             headers: {
                 'Content-Type': 'text/html'
             },
